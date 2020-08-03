@@ -1,0 +1,59 @@
+<meta charset="utf-8"/>
+<title>おたより募集中</title>
+<script src="script.js" type="module"></script>
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<style>
+    /* 一発ネタなので勘弁して */
+    body {
+        margin: 0;
+        padding: 0;
+        color: #151515;
+    }
+
+    .wrap {
+        width: 100vw;
+        height: 100vh;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        background-color: #f2fcf0;
+    }
+
+    .content {
+        max-width: 530px;
+        border-radius: 3px;
+        background-color: #FDFDFD;
+        padding: 25px;
+    }
+
+    .content header {
+        text-align: center;
+        font-size: 1.1rem;
+    }
+
+    .content form {
+        display: flex;
+    }
+
+    #message {
+        width: 100%;
+    }
+
+    #send {
+        width: 100px;
+    }
+</style>
+
+<body>
+<div class="wrap">
+    <div class="content">
+        <header>おたより募集中</header>
+        <p>このフォームにメッセージを入力し送信すると、@kznrlukの自室のサーマルプリンターで印刷されます。</p>
+        <form>
+            <label for="message"></label>
+            <textarea id="message"></textarea>
+            <button id="send">印刷</button>
+        </form>
+    </div>
+</div>
+</body>
