@@ -13,7 +13,7 @@ const getHash = () => {
 sendButton.addEventListener('click', async (e) => {
     e.preventDefault();
     if (textArea.value.length >= 256) {
-        return alert('貴重な資源の削減にご協力ください。');
+        return alert('貴重な資源の削減にご協力ください。文字数は256文字までです。');
     }
 
     const text = getHash() + '\n' + textArea.value;
