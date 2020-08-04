@@ -1,10 +1,18 @@
 const textArea = document.getElementById('message');
 const sendButton = document.getElementById('send');
 
+const getHash = () => {
+    const params = new URL(location.href).searchParams;
+    if (params.has('h')) {
+        return `WF-HASH: ${params.get('h')}\n`;
+    }
+
+    return `WF-HASH: (NONE)\n`
+}
+
 sendButton.addEventListener('click', async (e) => {
     e.preventDefault();
-    const text = textArea.value;
-    console.log( JSON.stringify({ string: text }))
+    const text = getHash() + '\n' + textArea.value;
 
     const result = await fetch('https://receipt.anyfrog.net/print', {
         method: 'POST',
