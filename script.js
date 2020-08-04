@@ -12,6 +12,10 @@ const getHash = () => {
 
 sendButton.addEventListener('click', async (e) => {
     e.preventDefault();
+    if (textArea.value >= 256) {
+        return alert('貴重な資源の削減にご協力ください。');
+    }
+
     const text = getHash() + '\n' + textArea.value;
 
     const result = await fetch('https://receipt.anyfrog.net/print', {
