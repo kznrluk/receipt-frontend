@@ -12,7 +12,7 @@ const getHash = () => {
 
 sendButton.addEventListener('click', async (e) => {
     e.preventDefault();
-    if (textArea.value >= 256) {
+    if (textArea.value.length >= 256) {
         return alert('貴重な資源の削減にご協力ください。');
     }
 
